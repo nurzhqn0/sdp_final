@@ -4,7 +4,9 @@
 **Group:** SE-2436      
 **Team members:** Ali, Dias, Nurzhan    
 **GitHub:** https://github.com/nurzhqn0/sdp_final
+
 ---
+
 ## 1. Introduction
 
 ### 1.1 Background
