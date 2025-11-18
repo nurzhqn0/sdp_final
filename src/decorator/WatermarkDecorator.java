@@ -22,10 +22,10 @@ public class WatermarkDecorator extends DocumentDecorator {
 
     @Override
     public Document process(Document document) {
-        // First, process with wrapped processor
+        // first, process with wrapped processor
         Document processed = super.process(document);
         
-        // Then add watermark
+        // then add watermark
         System.out.println("WatermarkDecorator: Adding watermark '" + watermarkText + "'");
         
         byte[] watermarkedContent = addWatermark(processed.getContent());
@@ -36,16 +36,8 @@ public class WatermarkDecorator extends DocumentDecorator {
         
         return processed;
     }
-    
-    /**
-     * Simulates adding a watermark to document
-     * In real implementation, this would modify the actual document content
-     * @param content Original content
-     * @return Content with watermark
-     */
+
     private byte[] addWatermark(byte[] content) {
-        // Simulated watermark addition
-        // In real implementation, use libraries like iText for PDF or Apache POI for DOCX
         String watermarkData = "\n[WATERMARK: " + watermarkText + "]\n";
         byte[] watermarkBytes = watermarkData.getBytes();
         
